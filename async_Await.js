@@ -33,7 +33,15 @@ function asynchronousFunction1() {
   return combinedPromises;
 }
 
-console.log('with Promises Race',asynchronousFunction1());
+// When you call asynchronousFunction1(), it immediately returns the Promise object created by Promise.race. However:
+// 	•	A Promise represents a future value, meaning the result will only be available once the asynchronous operation settles (resolves or rejects).
+// 	•	When you log the Promise, it shows Promise { <pending> } because it hasn’t settled yet.
+
+console.log("with Promises Race", asynchronousFunction1());
+
+asynchronousFunction1().then((result) => {
+  console.log(result);
+});
 
 function display() {
   let synchornousFrunction = asynchronousFunction();
