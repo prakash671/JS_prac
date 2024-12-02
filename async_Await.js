@@ -21,7 +21,19 @@ function asynchronousFunction() {
   return combinedPromises;
 }
 
-console.log(asynchronousFunction());
+function asynchronousFunction1() {
+  let promise1 = Promise.resolve("promise 1 is resolved successfully");
+  let promise2 = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("this method is 1s delay due to timeout");
+    }, 1000);
+  });
+
+  let combinedPromises = Promise.race([promise1, promise2]);
+  return combinedPromises;
+}
+
+console.log('with Promises Race',asynchronousFunction1());
 
 function display() {
   let synchornousFrunction = asynchronousFunction();
