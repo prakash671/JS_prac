@@ -52,9 +52,9 @@ const promiseReject = new Promise((resolve, reject) => {
 however race wont fail because this not the first method that is being executed
 */
 
-Promise.all([promise, chancePromise, luckPromise, promiseReject]).then(
+Promise.all([promise, chancePromise, luckPromise]).then(
   (promises) => {
-    console.log("---------- Promises ALL---------");
+    console.log("---------- Promises ALL----------");
     promises.forEach((prom, i) => {
       i++;
       console.log(i + "." + prom);
