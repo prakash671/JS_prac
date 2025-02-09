@@ -1,0 +1,8 @@
+Feature	-> Common Use Case
+Timers	-> Delayed or repeated execution (e.g., setTimeout).
+Browser APIs ->	Network requests, geolocation, DOM events, etc.
+Promises & Async/Await	-> Clean and manageable asynchronous workflows.
+Callbacks	-> Handling simple asynchronous tasks (old style).
+Web Workers	-> Background processing.
+Event Listeners	-> User interaction handling (e.g., click events).
+File System	-> Non-blocking file operations in Node.js.

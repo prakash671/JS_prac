@@ -24,7 +24,7 @@ const fetchComments = mockApi("https://api.example.com/comments");
 
 // Execution
 Promise.all([fetchUserData, fetchPosts, fetchComments])
-  .then((responses) => Promise.all(responses.map((res) => res.json())))
+  .then((responses) => Promise.all(responses.map((res) => res.json() )))
   .then((data) => {
     const mappedData = data.map((item) => {
       console.log(item);

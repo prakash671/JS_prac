@@ -33,8 +33,8 @@ console.log(arr1);
 const arrObj = [{ x: 1 }, { x: 2 }, { x: 3 }];
 
 arrObj.forEach((item) => {
-  item.x = item.x * 2; // Modifies the `x` property of the actual object.
-  console.log(item);  // Logs the modified object.
+  item.x = item.x * 2;
+  console.log(item);
 });
 
-console.log(arrObj); // Original array is mutated: [{ x: 2 }, { x: 4 }, { x: 6 }]
+console.log(arrObj);
